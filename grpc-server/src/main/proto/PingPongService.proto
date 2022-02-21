@@ -1,0 +1,13 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.grpc.server.grpcserver;
+
+message PingRequest {
+    string ping = 1;
+}
+message PongResponse {
+    string pong = 1;
+}
+service PingPongService {
+    rpc ping(PingRequest) returns (PongResponse);
+}
